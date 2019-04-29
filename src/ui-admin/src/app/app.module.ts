@@ -11,6 +11,7 @@ import { UsersComponent } from './sections/users/users.component';
 import { CategoriesComponent } from './sections/categories/categories.component';
 import { QuizzesComponent } from './sections/quizzes/quizzes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     UsersComponent,
     CategoriesComponent,
-    QuizzesComponent
+    QuizzesComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
