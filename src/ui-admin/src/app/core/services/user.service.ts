@@ -1,17 +1,16 @@
-import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { ApiService } from './api.service';
 import { User } from 'src/app/shared/models/user.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UserService {
   private readonly ctrlUrl = 'User';
 
   constructor(private apiService: ApiService) { }
 
-  public update(id: string, user: User): Observable<Object> {
+  public update(id: string, user: User): Observable<object> {
     return this.apiService.put(`/${this.ctrlUrl}/UpdateProfile/${id}`, user);
   }
 
