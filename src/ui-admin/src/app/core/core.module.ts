@@ -3,6 +3,7 @@ import { UserService } from './services/user.service';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 import { CommonModule } from '@angular/common';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CommonModule } from '@angular/common';
     ],
     providers: [
         ApiService,
-        UserService
+        UserService,
+        AuthService
     ],
     declarations: []
   })
