@@ -2,4 +2,15 @@
   <span class="logo logo-left">Easy</span>
   <span class="logo logo-right">Quizy</span>
   <span class="logo logo-right2">Admin</span>
+  <button class="btn btn-primary btn-margin"
+    *ngIf="!auth.isAuthenticated()"
+    (click)="auth.login()">
+    Log In
+  </button>
+
+  <button class="btn btn-primary btn-margin"
+    *ngIf="auth.isAuthenticated()"
+    (click)="auth.logout()">
+      Log Out
+  </button>
 </a>
